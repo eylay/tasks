@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     $('.danger button').click(function () {
+        TaskId = $(this).attr('data-id');
         $('#are-you-sure').show(500);
     });
 
@@ -8,7 +9,7 @@ $(document).ready(function () {
         var value = $(this).val();
         if (value == 1) {
             //yes
-            alert('Yes');
+            $('#task-'+TaskId).submit();
         }else {
             //no
             $('#are-you-sure').hide(500);
