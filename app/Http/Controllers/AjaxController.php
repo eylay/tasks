@@ -15,6 +15,8 @@ class AjaxController extends Controller
 
     public function mark_tasks()
     {
-        echo "Ali Seyfi";
+        $task = \App\Task::find(request('task_id'));
+        $task->done = !$task->done;
+        $task->save();
     }
 }

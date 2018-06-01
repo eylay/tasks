@@ -20,7 +20,7 @@
                     <th scope="row">{{$key+1}}</th>
                     <td> {{$task->name ?? '-'}} </td>
                     <td> {{$task->date ?? '-'}} </td>
-                    <td>
+                    <td class="task-done" data-task-id="{{$task->id}}">
                         @if ($task->done)
                             <span class="text-success"> <i class="fa fa-check half-x"></i> </span>
                         @else
@@ -47,7 +47,7 @@
                             </button>
                         </form>
                     </td>
-                    <td>
+                    <td class="mark-task" data-task-id="{{$task->id}}">
                         @if ($task->done)
                             <a class="text-warning pointer" title="مارک کردن به عنوان انجام نشده" onclick="markTask({{$task->id}})">
                                 <i class="fa fa-times-circle half-x"></i>

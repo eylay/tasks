@@ -23,6 +23,9 @@ function markTask(id) {
         task_id : id
     }
     sendAjax('mark_tasks',formData,null);
+    $('td.mark-task[data-task-id='+id+'] i').toggleClass('fa-times-circle fa-check-circle');
+    $('td.task-done[data-task-id='+id+'] span').toggleClass('text-success text-danger');
+    $('td.task-done[data-task-id='+id+'] i').toggleClass('fa-times fa-check');
 }
 
 function sendAjax(method,formData,target){
