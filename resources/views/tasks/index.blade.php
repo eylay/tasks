@@ -37,12 +37,12 @@
                         <a href="{{url("tasks/$task->id/edit")}}" class="text-success" title="ویرایش"> <i class="fa fa-edit half-x"></i> </a>
                     </td>
                     <td>
-                        <form class="" action="{{url("tasks/$task->id")}}" method="post">
+                        <form class="danger" action="{{url("tasks/$task->id")}}" method="post">
 
                             @csrf
                             {{method_field('DELETE')}}
 
-                            <button type="submit" class="btn btn-link p-0">
+                            <button type="button" class="btn btn-link p-0">
                                 <i class="fa fa-trash text-danger pointer half-x"></i>
                             </button>
                         </form>
