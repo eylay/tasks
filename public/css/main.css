@@ -1,6 +1,27 @@
+@font-face {
+    src: url('../fonts/Yekan.woff');
+    font-family: 'Yekan';
+}
+
+body {
+    font-family: 'Yekan';
+}
+
 .half-x {
     font-size: 1.5em;
 }
 .pointer {
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.excactly-center {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }

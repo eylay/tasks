@@ -1,6 +1,8 @@
 @extends('layouts.master')
 @section('content')
 
+    @include('fragments.are_you_sure')
+
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
