@@ -11,12 +11,12 @@
 
         <div class="col-md-3">
             <label for="name"> نام تسک </label>
-            <input type="text" class="form-control" name="name" value="">
+            <input type="text" class="form-control" name="name" value="{{old('name')}}">
         </div>
 
         <div class="col-md-3">
             <label for="date"> تاریخ </label>
-            <input type="date" class="form-control" name="date" value="">
+            <input type="date" class="form-control" name="date" value="{{old('date')}}">
         </div>
         <div class="col-md-3"></div>
 
