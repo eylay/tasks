@@ -14,6 +14,11 @@ class TaskController extends Controller
         return view('tasks.index',compact('tasks'));
     }
 
+    public function show(Task $task)
+    {
+        return view('tasks.show',compact('task'));
+    }
+
     public function create()
     {
         return view('tasks.create');
