@@ -1,4 +1,6 @@
-td.done > span {
-    font-size: 1.75em;
-    font-weight: bold;
+.half-x {
+    font-size: 1.5em;
+}
+.pointer {
+    cursor: pointer;
 }
