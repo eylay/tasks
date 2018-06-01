@@ -21,17 +21,35 @@ class TaskController extends Controller
 
     public function create()
     {
-        return view('tasks.create');
+        $task = new Task;
+        return view('tasks.form',compact('task'));
     }
 
-    public function store(Request $request)
+    public function store()
     {
-        $data = $request->validate([
-            "name" => "required|string|between:4,100|unique:tasks,name",
-            "date" =>  "nullable|date",
-        ]);
+        $data = ValidationController::task();
         Task::create($data);
         HelperController::flash();
+        return redirect("tasks");
+    }
+
+    public function edit(Task $task)
+    {
+        return view('tasks.form',compact('task'));
+    }
+
+    public function update(Task $task)
+    {
+        $data = ValidationController::task($task->id);
+        $task->update($data);
+        HelperController::message("آیتم مورد نظر ویرایش شد.");
         return back();
+    }
+
+    public function destroy(Task $task)
+    {
+        $task->delete();
+        HelperController::flash_delete_message();
+        return redirect("tasks");
     }
 }
