@@ -5,4 +5,5 @@ Route::get('/', function () {
 });
 
 Route::get('tasks/create','TaskController@create');
+Route::get('tasks','TaskController@index');
 Route::post('tasks','TaskController@store');
