@@ -5,3 +5,5 @@ Route::get('/', function () {
 });
 
 Route::resource('tasks','TaskController');
+
+Route::post('ajax/{mehtod}','AjaxController@main');

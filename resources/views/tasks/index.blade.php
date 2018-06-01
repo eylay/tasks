@@ -49,9 +49,13 @@
                     </td>
                     <td>
                         @if ($task->done)
-                            <a class="text-warning pointer" title="مارک کردن به عنوان انجام نشده"> <i class="fa fa-times-circle half-x"></i> </a>
+                            <a class="text-warning pointer" title="مارک کردن به عنوان انجام نشده" onclick="markTask({{$task->id}})">
+                                <i class="fa fa-times-circle half-x"></i>
+                            </a>
                         @else
-                            <a class="text-warning pointer" title="مشاهده"> <i class="fa fa-check-circle half-x"></i> </a>
+                            <a class="text-warning pointer" title="مارک کردن به عنوان انجام شده" onclick="markTask({{$task->id}})">
+                                <i class="fa fa-check-circle half-x"></i>
+                            </a>
                         @endif
                     </td>
                 </tr>
