@@ -5,6 +5,7 @@
         <title> Task Project </title>
 
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link rel="stylesheet" href="{{asset('css/animate.css')}}">
         <link rel="stylesheet" href="{{asset('css/main.css')}}">
 
     </head>
@@ -19,5 +20,6 @@
             @yield('content')
         </main>
 
+        <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
